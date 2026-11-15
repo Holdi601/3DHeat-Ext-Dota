@@ -48,9 +48,9 @@ def cmd_level(args) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     try:
-        import heat3d_update
+        from . import update
 
-        heat3d_update.startup("heat3d_ext_dota")
+        update.startup("heat3d_ext_dota")
     except Exception:  # an update check never stops an export
         pass
     ap = argparse.ArgumentParser(prog="heat3d-dota-maps", description="Dota 2's map from your own install into a 3DHeat level")
