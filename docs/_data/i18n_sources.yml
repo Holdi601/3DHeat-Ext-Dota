@@ -1,7 +1,7 @@
 # The English pages' hashes; written by tools/docs_i18n.py hashes. Do not edit.
 before-you-start.md: "8978ef7afccc"
-index.md: "a1d480a07830"
-level.md: "cf6d9414a203"
+index.md: "3e8858fb1b90"
+level.md: "6af25f0a3539"
 list.md: "a03dec416591"
 maintaining.md: "52ca6344c235"
-terms.md: "0c470cb49eea"
+terms.md: "04ca2f908fa5"

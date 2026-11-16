@@ -19,6 +19,11 @@ writes - on the game's own map in 3D, instead of a flat drawing.
 in the units and axes of the Watcher's Dota tables: no placing or scaling in
 the viewer.
 
+**Its own project:** Each game reader is its own small project with its own
+licence file, releases and issue tracker, so it can be installed, updated,
+maintained - or withdrawn on a rights holder's request - on its own, without
+affecting the viewer or the other tools.
+
 ## Quick start
 
 New to the command line? Read [Before you start](before-you-start.md) first.
@@ -39,8 +44,8 @@ Then load `levels/dota.glb` in the viewer's **Background / level** panel with
 **3D model…**: the viewer keeps it in its level library, and its **Dota 2 map**
 button loads it from then on ([Building a level](level.md#loading-it-in-the-viewer)).
 
-The level is built from the game's files: it stays **on your machine**, to
-view, not to share or publish ([Terms](terms.md)).
+The level is built from the game's files and stays **on your machine**
+([Terms](terms.md)).
 
 ## Pages
 
@@ -49,7 +54,7 @@ view, not to share or publish ([Terms](terms.md)).
 | [Before you start](before-you-start.md) | Python, Source2Viewer, a terminal, a first run |
 | [Finding things: list](list.md) | where Dota 2 and Source2Viewer's CLI are found, what `list` prints |
 | [Building a level: level](level.md) | every option, how the level is made, its parts, how it was checked |
-| [Terms and licence](terms.md) | Valve's map, Source2Viewer's licence, why this is a separate package |
+| [Terms and licence](terms.md) | Valve's map, Source2Viewer's licence, this tool as its own project |
 | [Command reference](cli-reference.md) | every option, generated from the code |
 | [Maintaining these docs](maintaining.md) | the release checklist |
 

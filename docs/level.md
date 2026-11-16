@@ -32,8 +32,8 @@ towers. The viewer knows the file by its parts and keeps it in its
 on its **Dota 2 map** button loads this 3D map instead of OpenDota's drawing.
 
 Nothing of the game is in this tool or downloaded by it: the map comes out of
-your own install, and the file it writes is yours to keep, not to share - the
-map is Valve's ([Terms](terms.md)).
+your own install, and the file it writes stays on your machine
+([Terms](terms.md)).
 
 ## How it is made
 

@@ -11,7 +11,11 @@ under which licence; each package's own source is what counts, not this file.
 
 ## The game's files
 
-Dota 2 belongs to Valve. This repository holds no file of the game and no
-level made from one; the tool reads the copy the user installed, on the user's
-machine, and the level it writes stays there. See
-[Terms and licence](https://holdi601.github.io/3DHeat-Ext-Dota/terms.html).
+3DHeat Dota is not affiliated with or endorsed by Valve. Dota 2 and related
+names and trademarks belong to their owners. This repository holds no file of
+the game and no level made from one; the tool reads the copy the user installed,
+on the user's machine, and the level it writes stays there. See [Terms and
+licence](https://holdi601.github.io/3DHeat-Ext-Dota/terms.html). Rights holders:
+open an issue at
+[3DHeat-Ext-Dota/issues](https://github.com/Holdi601/3DHeat-Ext-Dota/issues) -
+we respond quickly and remove anything on request.

@@ -3,7 +3,7 @@ title: Bedingungen und Lizenz
 nav_order: 8
 lang: "de"
 source: terms.md
-source_hash: "0c470cb49eea"
+source_hash: "04ca2f908fa5"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,15 +11,22 @@ search_exclude: true
 
 ## Valves Karte {#valves-map}
 
-Dota 2 und seine Karte gehören Valve, das dieses Projekt nicht unterstützt. Dieses Werkzeug liefert nichts
-vom Spiel mit und lädt nichts herunter: Es liest die Dateien der Kopie, die **du** installiert hast, auf
-deinem Rechner, über Source2Viewer, außerhalb des Spiels. Es verändert nichts im Spiel und spricht mit
-keinem Server. Das Level, das es schreibt, ist eine Ableitung der Karte von Valve: Es gehört dir zum
-Anschauen im 3DHeat-Viewer, nicht zum Teilen oder Veröffentlichen. Die Nutzung des Werkzeugs ist deine
-Entscheidung, unter den Bedingungen, die du für Dota 2 und Steam akzeptiert hast.
+3DHeat Dota ist weder mit Valve verbunden noch von Valve unterstützt. Dota 2 und zugehörige Namen
+und Marken gehören ihren Inhabern. Dieses Werkzeug liefert nichts vom Spiel mit und lädt nichts
+herunter: Es liest die Dateien der Kopie, die **du** installiert hast, auf deinem Rechner, über
+Source2Viewer, außerhalb des Spiels. Es verändert nichts im Spiel und spricht mit keinem Server. Das
+Level, das es schreibt, bleibt auf deinem Rechner, zum Anschauen im 3DHeat-Viewer.
 
-Deshalb ist es ein eigenes Paket: Wenn Valve je verlangt, dass es verschwindet, geht nur es, und der
-Viewer, der Watcher und die anderen Werkzeuge bleiben.
+## Ein eigenes Projekt {#its-own-project}
+
+Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und
+eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren, pflegen – oder
+auf Wunsch eines Rechteinhabers zurückziehen –, ohne den Viewer oder die anderen Werkzeuge zu
+berühren.
+
+Rechteinhaber: Eröffnet ein Issue unter
+[3DHeat-Ext-Dota/issues](https://github.com/Holdi601/3DHeat-Ext-Dota/issues) – wir antworten schnell
+und entfernen auf Wunsch alles.
 
 ## Source2Viewer {#source2viewer}
 

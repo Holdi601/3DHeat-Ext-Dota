@@ -3,7 +3,7 @@ title: Inicio
 nav_order: 1
 lang: "es"
 source: index.md
-source_hash: "a1d480a07830"
+source_hash: "3e8858fb1b90"
 nav_exclude: true
 search_exclude: true
 permalink: /es/
@@ -23,6 +23,8 @@ sobre el mapa propio del juego, en 3D, en vez de un dibujo plano.
 **Ejemplo:** `heat3d-dota-maps level -o levels/dota.glb` -> `levels/dota.glb`,
 en las unidades y ejes de las tablas de Dota del Watcher: sin colocar ni escalar nada en
 el visor.
+
+**Un proyecto propio:** Cada lector de un juego es un pequeño proyecto propio, con su propio archivo de licencia, sus versiones y su gestor de incidencias, así que puede instalarse, actualizarse, mantenerse (o retirarse a petición de un titular de derechos) por sí solo, sin afectar al visor ni a las demás herramientas.
 
 ## Inicio rápido {#quick-start}
 
@@ -44,8 +46,7 @@ Después carga `levels/dota.glb` en el panel **Fondo / nivel** del visor con
 **Modelo 3D…**: el visor lo guarda en su biblioteca de niveles, y su botón **Mapa de Dota 2**
 lo carga desde entonces ([Crear un nivel](level.md#cargarlo-en-el-visor)).
 
-El nivel se crea a partir de los archivos del juego, así que se queda **en tu equipo**,
-para verlo, no para compartirlo ni publicarlo ([Condiciones](terms.md)).
+El nivel se crea a partir de los archivos del juego y se queda **en tu equipo** ([Condiciones](terms.md)).
 
 ## Páginas {#pages}
 
@@ -54,7 +55,7 @@ para verlo, no para compartirlo ni publicarlo ([Condiciones](terms.md)).
 | [Antes de empezar](before-you-start.md) | Python, Source2Viewer, una terminal, una primera ejecución |
 | [Encontrar cosas: list](list.md) | dónde se encuentran Dota 2 y la línea de comandos de Source2Viewer, qué muestra `list` |
 | [Crear un nivel: level](level.md) | cada opción, cómo se crea el nivel, sus partes, cómo se comprobó |
-| [Condiciones y licencia](terms.md) | el mapa de Valve, la licencia de Source2Viewer, por qué es un paquete aparte |
+| [Condiciones y licencia](terms.md) | el mapa de Valve, la licencia de Source2Viewer, esta herramienta como proyecto propio |
 | [Referencia de comandos](../cli-reference.md) | cada opción, generada desde el código |
 | [Mantener estos documentos](maintaining.md) | la lista de comprobación de cada versión |
 

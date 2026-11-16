@@ -16,9 +16,10 @@ in the units and axes of the Watcher's Dota tables.
 command with step-by-step use and example output. Part of
 [3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
 
-This tool is kept outside the 3DHeat tools on purpose: it reads Valve's game
-files. If it ever has to go, nothing else goes with it. The levels it writes
-stay on your machine.
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn on
+a rights holder's request - on its own, without affecting the viewer or the
+other tools. The levels this tool writes stay on your machine.
 
 ## Install
 
@@ -79,10 +80,15 @@ so `python -m heat3d_watch dota-map -o dota.glb` does the same.
 
 ## Terms
 
-Dota 2 and its map belong to Valve, who do not endorse this project. Nothing of
-the game is in this repository or downloaded by it; the map comes out of your
-own install, and the level it writes is yours to view, not to share
-([Terms and licence](https://holdi601.github.io/3DHeat-Ext-Dota/terms.html)).
+3DHeat Dota is not affiliated with or endorsed by Valve. Dota 2 and related
+names and trademarks belong to their owners. Nothing of the game is in this
+repository or downloaded by it; the map comes out of your own install, and the
+level it writes stays on your machine ([Terms and
+licence](https://holdi601.github.io/3DHeat-Ext-Dota/terms.html)).
+
+Rights holders: open an issue at
+[3DHeat-Ext-Dota/issues](https://github.com/Holdi601/3DHeat-Ext-Dota/issues) -
+we respond quickly and remove anything on request.
 
 ## Tests
 

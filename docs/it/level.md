@@ -3,7 +3,7 @@ title: "Costruire un livello: level"
 nav_order: 3
 lang: "it"
 source: level.md
-source_hash: "cf6d9414a203"
+source_hash: "6af25f0a3539"
 nav_exclude: true
 search_exclude: true
 ---
@@ -35,8 +35,7 @@ riconosce il file dalle sue parti e lo conserva nella sua [libreria dei livelli]
 da quel momento il suo pulsante **Mappa di Dota 2** carica questa mappa 3D invece del disegno di OpenDota.
 
 Nulla del gioco è contenuto in questo strumento né viene scaricato da esso: la mappa proviene dalla
-tua installazione, e il file che scrive è tuo da conservare, non da condividere - la mappa è di Valve
-([Termini](terms.md)).
+tua installazione, e il file che scrive resta sul tuo computer ([Termini](terms.md)).
 
 ## Come è fatto {#how-it-is-made}
 

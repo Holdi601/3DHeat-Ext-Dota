@@ -3,7 +3,7 @@ title: Startseite
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "a1d480a07830"
+source_hash: "3e8858fb1b90"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -22,6 +22,11 @@ Karte des Spiels in 3D zu sehen, statt auf einer flachen Zeichnung.
 
 **Beispiel:** `heat3d-dota-maps level -o levels/dota.glb` -> `levels/dota.glb`, in den Einheiten und
 Achsen der Dota-Tabellen des Watchers: kein Platzieren oder Skalieren im Viewer nötig.
+
+**Ein eigenes Projekt:** Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei,
+eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren,
+aktualisieren, pflegen – oder auf Wunsch eines Rechteinhabers zurückziehen –, ohne den Viewer oder
+die anderen Werkzeuge zu berühren.
 
 ## Schnellstart {#quick-start}
 
@@ -43,8 +48,8 @@ Lade danach `levels/dota.glb` im Viewer im Panel **Hintergrund / Level** mit **3
 behält es in seiner Level-Bibliothek, und sein Button **Dota-2-Karte** lädt es von da an
 ([Ein Level bauen](level.md#loading-it-in-the-viewer)).
 
-Das Level wird aus den Dateien des Spiels gebaut. Es bleibt **auf deinem Rechner**, zum Anschauen,
-nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
+Das Level wird aus den Dateien des Spiels gebaut und bleibt **auf deinem Rechner**
+([Bedingungen](terms.md)).
 
 ## Seiten {#pages}
 
@@ -53,7 +58,7 @@ nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
 | [Bevor du anfängst](before-you-start.md) | Python, Source2Viewer, ein Terminal, ein erster Lauf |
 | [Dinge finden: list](list.md) | wo Dota 2 und die Kommandozeile von Source2Viewer gefunden werden, was `list` ausgibt |
 | [Ein Level bauen: level](level.md) | jede Option, wie das Level entsteht, seine Teile, wie es geprüft wurde |
-| [Bedingungen und Lizenz](terms.md) | Valves Karte, die Lizenz von Source2Viewer, warum dies ein eigenes Paket ist |
+| [Bedingungen und Lizenz](terms.md) | Valves Karte, die Lizenz von Source2Viewer, dieses Werkzeug als eigenes Projekt |
 | [Befehlsreferenz](../cli-reference.md) | jede Option, aus dem Code erzeugt |
 | [Diese Dokumentation pflegen](maintaining.md) | die Checkliste für Releases |
 

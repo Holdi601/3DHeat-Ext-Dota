@@ -3,7 +3,7 @@ title: "Accueil"
 nav_order: 1
 lang: "fr"
 source: index.md
-source_hash: "a1d480a07830"
+source_hash: "3e8858fb1b90"
 nav_exclude: true
 search_exclude: true
 permalink: /fr/
@@ -24,6 +24,11 @@ que le [3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/game-dota-repl
 dans les unités et les axes des tables Dota du Watcher : rien à placer ni à
 mettre à l'échelle dans le visualiseur.
 
+**Un projet à part :** Chaque lecteur de jeu est un petit projet à part, avec son propre
+fichier de licence, ses propres versions et son propre suivi des tickets : il peut être
+installé, mis à jour, maintenu - ou retiré à la demande d'un ayant droit - seul, sans
+toucher au visualiseur ni aux autres outils.
+
 ## Démarrage rapide {#quick-start}
 
 Vous ne connaissez pas la ligne de commande ? Lisez d'abord [Avant de commencer](before-you-start.md).
@@ -43,8 +48,8 @@ Avec `list`, vous devez voir `Dota 2 at ...`, une ligne par carte, et `Source2Vi
 Chargez ensuite `levels/dota.glb` dans le panneau **Arrière-plan / niveau** du visualiseur, avec **Modèle 3D…** : le visualiseur le garde dans sa bibliothèque
 de niveaux, et son bouton **Carte de Dota 2** le charge à partir de là ([Construire un niveau](level.md#loading-it-in-the-viewer)).
 
-Le niveau est construit à partir des fichiers du jeu : il reste **sur votre
-machine**, pour le voir, pas pour le partager ou le publier ([Conditions](terms.md)).
+Le niveau est construit à partir des fichiers du jeu et reste **sur votre machine**
+([Conditions](terms.md)).
 
 ## Pages {#pages}
 
@@ -53,7 +58,7 @@ machine**, pour le voir, pas pour le partager ou le publier ([Conditions](terms.
 | [Avant de commencer](before-you-start.md) | Python, Source2Viewer, un terminal, un premier lancement |
 | [Trouver les choses : list](list.md) | où sont trouvés Dota 2 et la ligne de commande de Source2Viewer, ce qu'affiche `list` |
 | [Construire un niveau : level](level.md) | chaque option, comment le niveau est fait, ses parties, comment il a été vérifié |
-| [Conditions et licence](terms.md) | la carte de Valve, la licence de Source2Viewer, pourquoi c'est un paquet séparé |
+| [Conditions et licence](terms.md) | la carte de Valve, la licence de Source2Viewer, cet outil comme projet à part |
 | [Référence des commandes](../cli-reference.md) | chaque option, générée à partir du code |
 | [Maintenance de ces documents](maintaining.md) | la liste de contrôle des versions |
 

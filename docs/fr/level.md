@@ -3,7 +3,7 @@ title: "Construire un niveau : level"
 nav_order: 3
 lang: "fr"
 source: level.md
-source_hash: "cf6d9414a203"
+source_hash: "6af25f0a3539"
 nav_exclude: true
 search_exclude: true
 ---
@@ -35,9 +35,8 @@ sur leurs tours. Le visualiseur reconnaît le fichier à ses parties et le garde
 [bibliothèque de niveaux](https://holdi601.github.io/3DHeat/level-library.html) ; à partir de là,
 son bouton **Carte de Dota 2** charge cette carte 3D au lieu du dessin d'OpenDota.
 
-Rien du jeu n'est dans cet outil ni téléchargé par lui : la carte sort de
-votre propre installation, et le fichier écrit est à vous à garder, pas à partager - la
-carte est celle de Valve ([Conditions](terms.md)).
+Rien du jeu n'est dans cet outil ni téléchargé par lui : la carte sort de votre propre
+installation, et le fichier écrit reste sur votre machine ([Conditions](terms.md)).
 
 ## Comment elle est faite {#how-it-is-made}
 

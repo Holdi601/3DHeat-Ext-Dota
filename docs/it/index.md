@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 lang: "it"
 source: index.md
-source_hash: "a1d480a07830"
+source_hash: "3e8858fb1b90"
 nav_exclude: true
 search_exclude: true
 permalink: /it/
@@ -22,6 +22,11 @@ scrive - sulla mappa del gioco stesso in 3D, invece che su un disegno piatto.
 **Esempio:** `heat3d-dota-maps level -o levels/dota.glb` -> `levels/dota.glb`,
 nelle unità e negli assi delle tabelle Dota del Watcher: nessun posizionamento o ridimensionamento
 nel visualizzatore.
+
+**Un progetto a sé:** Ogni lettore di un gioco è un piccolo progetto a sé, con il proprio file di
+licenza, i propri rilasci e il proprio tracker delle issue, così può essere installato, aggiornato,
+mantenuto - o ritirato su richiesta di un titolare dei diritti - da solo, senza toccare il
+visualizzatore o gli altri strumenti.
 
 ## Avvio rapido {#quick-start}
 
@@ -44,8 +49,7 @@ Poi carica `levels/dota.glb` nel pannello **Sfondo / livello** del visualizzator
 **Modello 3D…**: il visualizzatore lo conserva nella sua libreria dei livelli, e il suo pulsante
 **Mappa di Dota 2** lo carica da quel momento in poi ([Costruire un livello](level.md#loading-it-in-the-viewer)).
 
-Il livello è costruito dai file del gioco: resta **sul tuo computer**, per visualizzarlo, non per
-condividerlo o pubblicarlo ([Termini](terms.md)).
+Il livello è costruito dai file del gioco e resta **sul tuo computer** ([Termini](terms.md)).
 
 ## Pagine {#pages}
 
@@ -54,7 +58,7 @@ condividerlo o pubblicarlo ([Termini](terms.md)).
 | [Prima di iniziare](before-you-start.md) | Python, Source2Viewer, un terminale, una prima esecuzione |
 | [Trovare le cose: list](list.md) | dove vengono trovati Dota 2 e la CLI di Source2Viewer, cosa stampa `list` |
 | [Costruire un livello: level](level.md) | ogni opzione, come è fatto il livello, le sue parti, come è stato verificato |
-| [Termini e licenza](terms.md) | la mappa di Valve, la licenza di Source2Viewer, perché è un pacchetto separato |
+| [Termini e licenza](terms.md) | la mappa di Valve, la licenza di Source2Viewer, questo strumento come progetto a sé |
 | [Riferimento dei comandi](../cli-reference.md) | ogni opzione, generata dal codice |
 | [Manutenzione di questa documentazione](maintaining.md) | la lista di controllo per ogni rilascio |
 

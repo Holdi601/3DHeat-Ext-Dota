@@ -3,7 +3,7 @@ title: Termini e licenza
 nav_order: 8
 lang: "it"
 source: terms.md
-source_hash: "0c470cb49eea"
+source_hash: "04ca2f908fa5"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,15 +11,22 @@ search_exclude: true
 
 ## La mappa di Valve {#valves-map}
 
-Dota 2 e la sua mappa appartengono a Valve, che non approva questo progetto. Questo
-strumento non include nulla del gioco e non scarica nulla: legge i file della copia **che hai**
-installato, sul tuo computer, tramite Source2Viewer, al di fuori del gioco. Non modifica nulla nel
-gioco e non parla con nessun server. Il livello che scrive è un'opera derivata dalla mappa di Valve: è tuo
-da visualizzare nel visualizzatore 3DHeat, non da condividere o pubblicare. Usare lo strumento è una
-tua decisione, secondo i termini che hai accettato per Dota 2 e Steam.
+3DHeat Dota non è affiliato a Valve né approvato da Valve. Dota 2 e i nomi e i marchi correlati
+appartengono ai rispettivi proprietari. Questo strumento non include nulla del gioco e non scarica
+nulla: legge i file della copia **che hai** installato, sul tuo computer, tramite Source2Viewer, al
+di fuori del gioco. Non modifica nulla nel gioco e non parla con nessun server. Il livello che
+scrive resta sul tuo computer, da visualizzare nel visualizzatore 3DHeat.
 
-Per questo è un pacchetto a sé: se Valve un giorno chiedesse di ritirarlo, andrebbe ritirato da solo,
-e il visualizzatore, il Watcher e gli altri strumenti restano.
+## Un progetto a sé {#its-own-project}
+
+Ogni lettore di un gioco è un piccolo progetto a sé, con il proprio file di licenza, i propri
+rilasci e il proprio tracker delle issue, così può essere installato, aggiornato, mantenuto - o
+ritirato su richiesta di un titolare dei diritti - da solo, senza toccare il visualizzatore o gli
+altri strumenti.
+
+Titolari dei diritti: aprite una issue su
+[3DHeat-Ext-Dota/issues](https://github.com/Holdi601/3DHeat-Ext-Dota/issues) - rispondiamo in fretta
+e rimuoviamo qualsiasi cosa su richiesta.
 
 ## Source2Viewer {#source2viewer}
 

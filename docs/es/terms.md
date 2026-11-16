@@ -3,7 +3,7 @@ title: "Condiciones y licencia"
 nav_order: 8
 lang: "es"
 source: terms.md
-source_hash: "0c470cb49eea"
+source_hash: "04ca2f908fa5"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,13 @@ search_exclude: true
 
 ## El mapa de Valve {#valves-map}
 
-Dota 2 y su mapa son de Valve, que no respalda este proyecto. Esta herramienta no incluye nada del juego ni descarga nada: lee los archivos de la copia que **tú** instalaste, en tu equipo, a través de Source2Viewer, fuera del juego. No cambia nada en el juego y no habla con ningún servidor. El nivel que escribe es una obra derivada del mapa de Valve: es tuyo para verlo en el visor 3DHeat, no para compartirlo ni publicarlo. Usar la herramienta es decisión tuya, bajo las condiciones que aceptaste para Dota 2 y Steam.
+3DHeat Dota no está afiliado a Valve ni respaldado por Valve. Dota 2 y los nombres y marcas relacionados pertenecen a sus propietarios. Esta herramienta no incluye nada del juego ni descarga nada: lee los archivos de la copia que **tú** instalaste, en tu equipo, a través de Source2Viewer, fuera del juego. No cambia nada en el juego y no habla con ningún servidor. El nivel que escribe se queda en tu equipo, para verlo en el visor 3DHeat.
 
-Por eso es un paquete aparte: si Valve algún día pide que se retire, se retira solo, y el visor, el Watcher y las demás herramientas se quedan.
+## Un proyecto propio {#its-own-project}
+
+Cada lector de un juego es un pequeño proyecto propio, con su propio archivo de licencia, sus versiones y su gestor de incidencias, así que puede instalarse, actualizarse, mantenerse (o retirarse a petición de un titular de derechos) por sí solo, sin afectar al visor ni a las demás herramientas.
+
+Titulares de derechos: abran una incidencia en [3DHeat-Ext-Dota/issues](https://github.com/Holdi601/3DHeat-Ext-Dota/issues); respondemos con rapidez y retiramos cualquier cosa que se nos pida.
 
 ## Source2Viewer {#source2viewer}
 

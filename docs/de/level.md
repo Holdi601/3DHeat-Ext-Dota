@@ -3,7 +3,7 @@ title: "Ein Level bauen: level"
 nav_order: 3
 lang: "de"
 source: level.md
-source_hash: "cf6d9414a203"
+source_hash: "6af25f0a3539"
 nav_exclude: true
 search_exclude: true
 ---
@@ -36,8 +36,8 @@ Viewer erkennt die Datei an ihren Teilen und behält sie in seiner
 **Dota-2-Karte** statt der Zeichnung von OpenDota diese 3D-Karte.
 
 Nichts vom Spiel steckt in diesem Werkzeug, und es lädt nichts herunter: Die Karte stammt aus deiner
-eigenen Installation, und die Datei, die es schreibt, gehört dir zum Behalten, nicht zum Teilen – die
-Karte gehört Valve ([Bedingungen](terms.md)).
+eigenen Installation, und die Datei, die es schreibt, bleibt auf deinem Rechner
+([Bedingungen](terms.md)).
 
 ## So entsteht sie {#how-it-is-made}
 

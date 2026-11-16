@@ -3,7 +3,7 @@ title: "Crear un nivel: level"
 nav_order: 3
 lang: "es"
 source: level.md
-source_hash: "cf6d9414a203"
+source_hash: "6af25f0a3539"
 nav_exclude: true
 search_exclude: true
 ---
@@ -35,9 +35,7 @@ torres. El visor reconoce el archivo por sus partes y lo guarda en su
 [biblioteca de niveles](https://holdi601.github.io/3DHeat/level-library.html); desde entonces
 su botón **Mapa de Dota 2** carga este mapa 3D en lugar del dibujo de OpenDota.
 
-Esta herramienta no contiene nada del juego ni lo descarga: el mapa sale de tu propia
-instalación, y el archivo que escribe es tuyo para guardarlo, no para compartirlo; el
-mapa es de Valve ([Condiciones](terms.md)).
+Esta herramienta no contiene nada del juego ni lo descarga: el mapa sale de tu propia instalación, y el archivo que escribe se queda en tu equipo ([Condiciones](terms.md)).
 
 ## Cómo se crea {#how-it-is-made}
 
