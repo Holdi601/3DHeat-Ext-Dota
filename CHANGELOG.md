@@ -8,6 +8,8 @@
   frame, read through Source2Viewer's CLI. `list` says where Dota 2 and
   Source2Viewer are and which maps are installed; Source2Viewer is also found
   unzipped in the current folder or this tool's folder.
+- Installs with one pip line from the release zip, no Git needed; a pip install knows its version and updates itself with pip when a newer release is out.
+- README: a quick start for new users.
 
 ## Docs
 

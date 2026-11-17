@@ -3,7 +3,7 @@ title: Startseite
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "3e8858fb1b90"
+source_hash: "c285a56f1f74"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -30,26 +30,38 @@ die anderen Werkzeuge zu berühren.
 
 ## Schnellstart {#quick-start}
 
-Neu bei der Kommandozeile? Lies zuerst [Bevor du anfängst](before-you-start.md).
-Du brauchst Python 3.10 oder neuer, Dota 2, installiert über Steam, und die Kommandozeile von
-Source2Viewer (ein kostenloser Download unter der MIT-Lizenz, siehe
-[Dinge finden: list](list.md)). Führe diese Befehle in dem Ordner aus, den du geklont oder entpackt hast:
+Du brauchst Windows, Python 3.10 oder neuer (im Installer "Add python.exe to PATH"
+ankreuzen), Dota 2, installiert über Steam, und die Kommandozeile von Source2Viewer
+(kostenlos): lade von seinen
+[Releases](https://github.com/ValveResourceFormat/ValveResourceFormat/releases) die
+**CLI**-Version für Windows herunter und entpacke `Source2Viewer-CLI.exe` in den Ordner,
+in dem du die Befehle ausführst. Git ist nicht nötig. Neu auf der Kommandozeile? Lies
+zuerst [Bevor du anfängst](before-you-start.md).
 
 ```bash
-python -m pip install -e .                  # installs the heat3d-dota-maps command
-heat3d-dota-maps list                       # where Dota 2 and Source2Viewer are, the maps installed
-heat3d-dota-maps level -o levels/dota.glb   # the normal map as a level
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.1.0.zip
+heat3d-dota-maps list                       # wo Dota 2 und Source2Viewer sind, die installierten Karten
+heat3d-dota-maps level -o levels\dota.glb   # die normale Karte als Level
 ```
 
-Du solltest `Dota 2 at ...`, eine Zeile pro Karte und `Source2Viewer CLI at ...` aus `list` sehen;
-`level` endet mit einer Zeile wie
-`levels/dota.glb: dota, 700,000 triangles ... 2,400 trees, 70 buildings`.
-Lade danach `levels/dota.glb` im Viewer im Panel **Hintergrund / Level** mit **3D-Modell…**: Der Viewer
-behält es in seiner Level-Bibliothek, und sein Button **Dota-2-Karte** lädt es von da an
-([Ein Level bauen](level.md#loading-it-in-the-viewer)).
+Dota 2 wird in deinen Steam-Bibliotheken von selbst gefunden (sonst
+`--game "<...>\steamapps\common\dota 2 beta"`); ein Source2Viewer an anderer Stelle wird
+mit `--source2viewer <Pfad zu Source2Viewer-CLI.exe>` angegeben
+([Dinge finden: list](list.md)). Du solltest `Dota 2 at ...`, eine Zeile pro Karte und
+`Source2Viewer CLI at ...` aus `list` sehen; `level` schreibt eine Datei,
+`levels\dota.glb`, und endet mit einer Zeile wie
+`dota.glb: dota, 700,000 triangles ... 2,400 trees, 70 buildings`.
 
-Das Level wird aus den Dateien des Spiels gebaut und bleibt **auf deinem Rechner**
-([Bedingungen](terms.md)).
+Dann öffne die `.glb` im [3DHeat-Viewer](https://github.com/Holdi601/3DHeat#quick-start):
+herunterladen (**Code -> Download ZIP**, entpacken), `start.bat` doppelklicken (es bietet
+an, Node.js zu installieren, wenn es fehlt, und öffnet `http://127.0.0.1:5273`), dann
+**Hintergrund / Level -> 3D-Modell...** und die Datei wählen. Der Viewer behält sie in
+seiner Level-Bibliothek, und sein Button **Dota-2-Karte** lädt sie von da an unter einer
+Dota-Tabelle ([Ein Level bauen](level.md#loading-it-in-the-viewer)). Das Level bleibt auf
+deinem Rechner.
+
+Wenn ein neues Release erscheint, sagt das Werkzeug es beim Start und bietet an, sich
+selbst zu aktualisieren (`python -m heat3d_ext_dota.update` macht dasselbe).
 
 ## Seiten {#pages}
 

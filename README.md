@@ -21,7 +21,46 @@ and issue tracker, so it can be installed, updated, maintained - or withdrawn on
 a rights holder's request - on its own, without affecting the viewer or the
 other tools. The levels this tool writes stay on your machine.
 
-## Install
+## Quick start for new users
+
+You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
+("Add python.exe to PATH" ticked in its installer), Dota 2 installed through
+Steam, and Source2Viewer's command line (free): from its
+[releases](https://github.com/ValveResourceFormat/ValveResourceFormat/releases)
+download the **CLI** build for Windows and unzip `Source2Viewer-CLI.exe` into
+the folder you will run the commands in. No Git is needed.
+
+1. Install the tool (one line, in PowerShell or a command prompt):
+
+   ```bash
+   python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.1.0.zip
+   ```
+
+2. In the folder with `Source2Viewer-CLI.exe`, check that everything is found,
+   then build the map. Dota 2 is found in your Steam libraries by itself
+   (else `--game "<...>\steamapps\common\dota 2 beta"`); Source2Viewer
+   elsewhere is given with `--source2viewer <path to Source2Viewer-CLI.exe>`:
+
+   ```bash
+   heat3d-dota-maps list
+   heat3d-dota-maps level -o levels\dota.glb
+   ```
+
+3. `list` prints `Dota 2 at ...`, a line per map and `Source2Viewer CLI at ...`.
+   The output is one file, `levels\dota.glb` (the normal map: ground, cliffs,
+   water, trees, buildings); `level` ends with a line like
+   `dota.glb: dota, 700,000 triangles ... 2,400 trees, 70 buildings`.
+4. Open it in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+   download the viewer (**Code -> Download ZIP**, unpack) and double-click
+   `start.bat`; it offers to install [Node.js](https://nodejs.org/) when it is
+   missing and opens Chrome or Edge at `http://127.0.0.1:5273`. There, **Background / level ->
+   3D model...** and pick the `.glb`. The viewer keeps it in its level library,
+   and its **Dota 2 map** button loads it under a Dota table from then on.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself (`python -m heat3d_ext_dota.update` does the same).
+
+## Install from a checkout
 
 New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-Dota/before-you-start.html) first.
 

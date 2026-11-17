@@ -26,26 +26,37 @@ affecting the viewer or the other tools.
 
 ## Quick start
 
-New to the command line? Read [Before you start](before-you-start.md) first.
-You need Python 3.10 or later, Dota 2 installed through Steam, and
-Source2Viewer's command line (a free, MIT-licensed download, see
-[Finding things: list](list.md)). Run these in the folder you cloned or unzipped:
+You need Windows, Python 3.10 or later ("Add python.exe to PATH" ticked in its
+installer), Dota 2 installed through Steam, and Source2Viewer's command line
+(free): download the **CLI** build for Windows from its
+[releases](https://github.com/ValveResourceFormat/ValveResourceFormat/releases)
+and unzip `Source2Viewer-CLI.exe` into the folder you run the commands in. No
+Git is needed. New to the command line? Read [Before you start](before-you-start.md) first.
 
 ```bash
-python -m pip install -e .                  # installs the heat3d-dota-maps command
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.1.0.zip
 heat3d-dota-maps list                       # where Dota 2 and Source2Viewer are, the maps installed
-heat3d-dota-maps level -o levels/dota.glb   # the normal map as a level
+heat3d-dota-maps level -o levels\dota.glb   # the normal map as a level
 ```
 
-You should see `Dota 2 at ...`, a line per map, and `Source2Viewer CLI at ...`
-from `list`; `level` ends with a line like
-`levels/dota.glb: dota, 700,000 triangles ... 2,400 trees, 70 buildings`.
-Then load `levels/dota.glb` in the viewer's **Background / level** panel with
-**3D model…**: the viewer keeps it in its level library, and its **Dota 2 map**
-button loads it from then on ([Building a level](level.md#loading-it-in-the-viewer)).
+Dota 2 is found in your Steam libraries by itself (else
+`--game "<...>\steamapps\common\dota 2 beta"`); Source2Viewer elsewhere is
+given with `--source2viewer <path to Source2Viewer-CLI.exe>`
+([Finding things: list](list.md)). You should see `Dota 2 at ...`, a line per
+map and `Source2Viewer CLI at ...` from `list`; `level` writes one file,
+`levels\dota.glb`, and ends with a line like
+`dota.glb: dota, 700,000 triangles ... 2,400 trees, 70 buildings`.
 
-The level is built from the game's files and stays **on your machine**
-([Terms](terms.md)).
+Then open the `.glb` in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+download it (**Code -> Download ZIP**, unpack), double-click `start.bat` (it
+offers to install Node.js when it is missing and opens `http://127.0.0.1:5273`),
+then **Background / level -> 3D model...** and pick the file. The viewer keeps
+it in its level library, and its **Dota 2 map** button loads it under a Dota
+table from then on ([Building a level](level.md#loading-it-in-the-viewer)). The
+level stays on your machine.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself (`python -m heat3d_ext_dota.update` does the same).
 
 ## Pages
 
