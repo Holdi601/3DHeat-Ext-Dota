@@ -11,18 +11,22 @@ The other pages explain each command step by step.
 ## `heat3d-dota-maps`
 
 ```text
-usage: heat3d-dota-maps [-h] [--version] {list,level} ...
+usage: heat3d-dota-maps [-h] [--version] {list,level,catalog,models} ...
 
 Dota 2's map from your own install into a 3DHeat level
 
 positional arguments:
-  {list,level}
-    list        where Dota 2 and Source2Viewer's CLI are, and the maps installed
-    level       the map as a level (.glb) under the Dota replay tables
+  {list,level,catalog,models}
+    list                where Dota 2 and Source2Viewer's CLI are, and the maps
+                        installed
+    level               the map as a level (.glb) under the Dota replay tables
+    catalog             heroes, units and items with names, roles and numbers
+                        (catalog.json)
+    models              hero and unit models as a local model pack for the viewer
 
 options:
-  -h, --help    show this help message and exit
-  --version     show program's version number and exit
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
 ```
 
 ## `list`
@@ -60,6 +64,42 @@ options:
                         then the current folder and this tool's)
   --detail DETAIL       buildings' vertex clustering cell in game units (default 8; 0
                         keeps every triangle)
+```
+
+## `catalog`
+
+```text
+usage: heat3d-dota-maps catalog [-h] [-o OUT] [--game GAME]
+                                [--source2viewer SOURCE2VIEWER]
+
+options:
+  -h, --help            show this help message and exit
+  -o, --out OUT         the file to write (default $HEAT3D_LEVELS/dota/catalog.json,
+                        else ./catalog.json)
+  --game GAME           the Dota 2 folder, `dota 2 beta` or its game/dota (default:
+                        found in your Steam libraries)
+  --source2viewer SOURCE2VIEWER
+                        Source2Viewer-CLI's path (default: HEAT3D_SOURCE2VIEWER, PATH,
+                        then the current folder and this tool's)
+```
+
+## `models`
+
+```text
+usage: heat3d-dota-maps models [-h] [-o OUT] [--only ONLY [ONLY ...]] [--game GAME]
+                               [--source2viewer SOURCE2VIEWER]
+
+options:
+  -h, --help            show this help message and exit
+  -o, --out OUT         the folder to write (default $HEAT3D_LEVELS/model-packs/dota,
+                        else ./dota)
+  --only ONLY [ONLY ...]
+                        just the heroes or units whose id contains these
+  --game GAME           the Dota 2 folder, `dota 2 beta` or its game/dota (default:
+                        found in your Steam libraries)
+  --source2viewer SOURCE2VIEWER
+                        Source2Viewer-CLI's path (default: HEAT3D_SOURCE2VIEWER, PATH,
+                        then the current folder and this tool's)
 ```
 
 ## Output

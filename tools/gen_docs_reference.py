@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "cli-reference.md"
 COMMAND = "heat3d-dota-maps"
-VERBS = ["list", "level"]
+VERBS = ["list", "level", "catalog", "models"]
 
 
 def run(args):

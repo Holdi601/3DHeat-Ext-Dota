@@ -37,6 +37,8 @@ Git is needed. New to the command line? Read [Before you start](before-you-start
 python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.1.0.zip
 heat3d-dota-maps list                       # where Dota 2 and Source2Viewer are, the maps installed
 heat3d-dota-maps level -o levels\dota.glb   # the normal map as a level
+heat3d-dota-maps catalog                    # heroes, units, items (see Catalogue and models)
+heat3d-dota-maps models                     # hero and unit models for the viewer
 ```
 
 Dota 2 is found in your Steam libraries by itself (else

@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- `catalog`: heroes, units and items with names, roles, abilities and numbers
+  (`catalog.json`, format `3dheat-catalog`).
+- `models`: hero and unit models as a local model pack for the viewer, posed
+  at their idle, three levels of detail (`model-pack.json` + one `.glb` each).
+
 ## 0.1.0
 
 - First version, moved out of the 3DHeat Watcher (its `dota-map` command now

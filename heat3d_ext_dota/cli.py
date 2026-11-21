@@ -1,6 +1,8 @@
 """
 heat3d-dota-maps list                  where Dota 2 and Source2Viewer's CLI are, and the maps installed
 heat3d-dota-maps level [map] -o <file> the map as a 3DHeat level (.glb): ground, cliffs, water, trees, buildings
+heat3d-dota-maps catalog [-o <file>]   heroes, units and items with names, roles and numbers (catalog.json)
+heat3d-dota-maps models [-o <folder>]  hero and unit models as a local model pack (model-pack.json + .glb)
 
 Exit status: 0 done, 1 failed, 2 nothing to read (no Dota 2 install, no such map,
 no Source2Viewer CLI).
@@ -9,7 +11,9 @@ no Source2Viewer CLI).
 from __future__ import annotations
 
 import argparse
+import os
 import sys
+from pathlib import Path
 
 from . import __version__
 from . import dota_map
@@ -46,6 +50,51 @@ def cmd_level(args) -> int:
     return 0
 
 
+def _levels(*parts: str) -> Path:
+    """Under HEAT3D_LEVELS when it is set, else the current folder."""
+    home = os.environ.get("HEAT3D_LEVELS")
+    return Path(home, *parts) if home else Path(parts[-1])
+
+
+def cmd_catalog(args) -> int:
+    from . import catalog
+
+    try:
+        folder = dota_map.game_folder(args.game)
+        tool = dota_map.find_source2viewer(args.source2viewer)
+        out = Path(args.out) if args.out else _levels("dota", "catalog.json")
+        c = catalog.write_catalog(folder, tool, out, source=f"heat3d-dota-maps {__version__}")
+    except FileNotFoundError as e:
+        print(f"heat3d-dota-maps: {e}", file=sys.stderr)
+        return 2
+    except (OSError, RuntimeError) as e:
+        print(f"heat3d-dota-maps: {e}", file=sys.stderr)
+        return 1
+    kinds = {k: sum(1 for i in c["items"] if i["kind"] == k) for k in ("hero", "unit", "item")}
+    print(f"{out}: {kinds['hero']} heroes, {kinds['unit']} units, {kinds['item']} items (build {c['gameBuild'] or '?'})")
+    return 0
+
+
+def cmd_models(args) -> int:
+    from . import models
+
+    try:
+        folder = dota_map.game_folder(args.game)
+        tool = dota_map.find_source2viewer(args.source2viewer)
+    except FileNotFoundError as e:
+        print(f"heat3d-dota-maps: {e}", file=sys.stderr)
+        return 2
+    out = Path(args.out) if args.out else _levels("model-packs", "dota")
+    out.mkdir(parents=True, exist_ok=True)
+    r = models.write_pack(folder, tool, out, source=f"heat3d-dota-maps {__version__}", only=args.only,
+                          say=lambda text: print(text, file=sys.stderr))
+    size = sum(f.stat().st_size for f in out.glob("*.glb"))
+    print(f"{out}: {len(r['units'])} models, {size / 1e6:.1f} MB")
+    if r["failed"]:
+        print(f"not exported by Source2Viewer: {', '.join(r['failed'])}", file=sys.stderr)
+    return 0 if r["units"] else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     try:
         from . import update
@@ -72,6 +121,17 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--detail", type=float, default=8.0,
                    help="buildings' vertex clustering cell in game units (default 8; 0 keeps every triangle)")
     p.set_defaults(run=cmd_level)
+
+    p = sub.add_parser("catalog", help="heroes, units and items with names, roles and numbers (catalog.json)")
+    p.add_argument("-o", "--out", help="the file to write (default $HEAT3D_LEVELS/dota/catalog.json, else ./catalog.json)")
+    where(p)
+    p.set_defaults(run=cmd_catalog)
+
+    p = sub.add_parser("models", help="hero and unit models as a local model pack for the viewer")
+    p.add_argument("-o", "--out", help="the folder to write (default $HEAT3D_LEVELS/model-packs/dota, else ./dota)")
+    p.add_argument("--only", nargs="+", help="just the heroes or units whose id contains these")
+    where(p)
+    p.set_defaults(run=cmd_models)
 
     args = ap.parse_args(argv)
     return args.run(args)

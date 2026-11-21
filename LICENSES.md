@@ -6,6 +6,7 @@ under which licence; each package's own source is what counts, not this file.
 | Software | Licence | How it is used |
 |---|---|---|
 | numpy | BSD-3-Clause | a dependency, installed by pip |
+| fast-simplification | MIT | a dependency, installed by pip (simplifies the model pack) |
 | pytest | MIT | development only: the tests |
 | Source2Viewer CLI (ValveResourceFormat) | MIT | **not bundled**: the user downloads it from github.com/ValveResourceFormat/ValveResourceFormat and this tool runs it as a separate program to read the user's own installed Dota 2; none of its code is in this repository |
 

@@ -9,7 +9,7 @@ description = "Dota 2's map from your own install into a 3DHeat level: ground, c
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-dependencies = ["numpy>=1.24"]
+dependencies = ["numpy>=1.24", "fast-simplification>=0.1"]
 
 [project.optional-dependencies]
 test = ["pytest>=8.0"]

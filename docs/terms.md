@@ -12,7 +12,8 @@ names and trademarks belong to their owners. This tool ships nothing of the game
 and downloads nothing: it reads the files of the copy **you** installed, on your
 machine, through Source2Viewer, outside the game. It changes nothing in the game
 and talks to no server. The level it writes stays on your machine, for you to
-view in the 3DHeat viewer.
+view in the 3DHeat viewer. The same holds for the catalogue and the model
+pack (`catalog`, `models`): written for your machine, not to be passed on.
 
 ## Its own project
 
