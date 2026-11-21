@@ -261,7 +261,7 @@ def write_pack(folder: Path, tool: Path, out_dir: Path, *, source: str, only: li
             built = modelpack.build_lods({"hull": (v, f)}, BUILDING_BUDGETS if w["kind"] == "building" else BUDGETS)
             key = f"{w['model']}|{','.join(w['items'])}|{w['scale']}|{build}"
             asset = {"source": source, "version": 1, "game": GAME, "gameBuild": build, "unit": w["id"], "scale": 1}
-            meta = {"unit": w["id"], "kind": w["kind"], "domain": "person" if w["kind"] == "hero" else "ground",
+            meta = {"unit": w["id"], "kind": w["kind"], "domain": "person",
                     "anchor": "ground", "pivots": {}}
             modelpack.write_unit_glb(out_dir / f"{w['id']}.glb", built, meta, asset)
             units[w["id"]] = modelpack.unit_entry(
