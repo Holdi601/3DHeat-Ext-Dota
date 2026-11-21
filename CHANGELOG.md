@@ -1,7 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
+- `layouts`: towers, barracks, ancients, fountains, outposts, shrines and the heroes', couriers', creeps' and
+  neutrals' spawns as `<map>.layouts.json` beside the level. Docs: [Level](docs/level.md#towers-bases-and-spawns-layouts).
 - `catalog`: heroes, units and items with names, roles, abilities and numbers
   (`catalog.json`, format `3dheat-catalog`).
 - `models`: hero and unit models as a local model pack for the viewer, posed

@@ -35,6 +35,15 @@ Nothing of the game is in this tool or downloaded by it: the map comes out of
 your own install, and the file it writes stays on your machine
 ([Terms](terms.md)).
 
+## Towers, bases and spawns (layouts)
+
+`heat3d-dota-maps layouts -o <folder>` writes `dota.layouts.json` beside the
+level from the same entities: towers, barracks and the ancients by side, the
+fountains as each side's base, outposts, shrines, lotus pools, twin gates,
+Roshan's and the runes' spots, and where heroes, couriers, lane creeps and
+neutral camps spawn. The viewer draws them on the map (Objectives panel,
+Tactics board); Radiant is team 1, Dire team 2.
+
 ## How it is made
 
 1. **The collision mesh.** Source2Viewer exports the map's

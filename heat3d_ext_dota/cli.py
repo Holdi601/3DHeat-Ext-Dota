@@ -36,6 +36,23 @@ def cmd_list(args) -> int:
     return 0
 
 
+def cmd_layouts(args) -> int:
+    from . import layouts
+
+    try:
+        line = layouts.export_layouts(args.map, args.out, game=args.game, source2viewer=args.source2viewer,
+                                      tool_name=f"heat3d-dota-maps {__version__}",
+                                      say=lambda text: print(text, file=sys.stderr))
+    except FileNotFoundError as e:
+        print(f"heat3d-dota-maps: {e}", file=sys.stderr)
+        return 2
+    except (OSError, RuntimeError, ValueError) as e:
+        print(f"heat3d-dota-maps: {e}", file=sys.stderr)
+        return 1
+    print(line)
+    return 0
+
+
 def cmd_level(args) -> int:
     try:
         line = dota_map.export_map(args.map, args.out, game=args.game, source2viewer=args.source2viewer,
@@ -121,6 +138,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--detail", type=float, default=8.0,
                    help="buildings' vertex clustering cell in game units (default 8; 0 keeps every triangle)")
     p.set_defaults(run=cmd_level)
+
+    p = sub.add_parser("layouts", help="towers, barracks, ancients, fountains and spawns as <map>.layouts.json")
+    p.add_argument("map", nargs="?", default="dota", help="the map's name as list prints it (default: dota)")
+    p.add_argument("-o", "--out", required=True, help="the .layouts.json to write, or the folder of the map's level")
+    where(p)
+    p.set_defaults(run=cmd_layouts)
 
     p = sub.add_parser("catalog", help="heroes, units and items with names, roles and numbers (catalog.json)")
     p.add_argument("-o", "--out", help="the file to write (default $HEAT3D_LEVELS/dota/catalog.json, else ./catalog.json)")

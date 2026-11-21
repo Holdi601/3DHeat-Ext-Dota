@@ -33,7 +33,7 @@ the folder you will run the commands in. No Git is needed.
 1. Install the tool (one line, in PowerShell or a command prompt):
 
    ```bash
-   python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.1.0.zip
+   python -m pip install https://github.com/Holdi601/3DHeat-Ext-Dota/archive/refs/tags/v0.2.0.zip
    ```
 
 2. In the folder with `Source2Viewer-CLI.exe`, check that everything is found,

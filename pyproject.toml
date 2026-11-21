@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "heat3d-ext-dota"
-version = "0.1.0"
+version = "0.2.0"
 description = "Dota 2's map from your own install into a 3DHeat level: ground, cliffs, water, trees and buildings, read by Source2Viewer's CLI"
 readme = "README.md"
 license = { file = "LICENSE" }

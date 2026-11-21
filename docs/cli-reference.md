@@ -11,15 +11,17 @@ The other pages explain each command step by step.
 ## `heat3d-dota-maps`
 
 ```text
-usage: heat3d-dota-maps [-h] [--version] {list,level,catalog,models} ...
+usage: heat3d-dota-maps [-h] [--version] {list,level,layouts,catalog,models} ...
 
 Dota 2's map from your own install into a 3DHeat level
 
 positional arguments:
-  {list,level,catalog,models}
+  {list,level,layouts,catalog,models}
     list                where Dota 2 and Source2Viewer's CLI are, and the maps
                         installed
     level               the map as a level (.glb) under the Dota replay tables
+    layouts             towers, barracks, ancients, fountains and spawns as
+                        <map>.layouts.json
     catalog             heroes, units and items with names, roles and numbers
                         (catalog.json)
     models              hero and unit models as a local model pack for the viewer
