@@ -19,3 +19,6 @@ dist/
 *.exe
 *.dll
 Source2Viewer-CLI
+
+# Standalone builds.
+dist-standalone/

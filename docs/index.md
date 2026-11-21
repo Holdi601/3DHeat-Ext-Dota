@@ -24,6 +24,36 @@ licence file, releases and issue tracker, so it can be installed, updated,
 maintained - or withdrawn on a rights holder's request - on its own, without
 affecting the viewer or the other tools.
 
+## The standalone program (no Python needed)
+
+Each [release](https://github.com/Holdi601/3DHeat-Ext-Dota/releases/latest)
+has a ready-to-run program for Windows (`heat3d-dota-maps-<version>-windows-x64.zip`),
+Linux (`...-linux-x64.tar.gz`, also for Steam Deck) and macOS (`...-macos-arm64.tar.gz`),
+with a `SHA256SUMS` file to check the download. Unpack it anywhere and start
+`heat3d-dota-maps` (on macOS the first start may need *Open* from the
+right-click menu, as the program is not notarised). Unzip Source2Viewer's CLI
+build for your system next to it.
+
+Started without arguments it opens a window that:
+
+- finds your Dota 2 install (Steam on any system, also flatpak and Steam
+  Deck), or lets you choose its folder;
+- says what is missing: the game, Source2Viewer-CLI, free disk space;
+- lists the install's maps as new, changed by a game update, exported by an
+  older version, or up to date, and exports the ones you pick, one at a time,
+  into the 3DHeat levels folder (`HEAT3D_LEVELS`, by default
+  `%LOCALAPPDATA%\3DHeat\levels` on Windows and `~/.local/share/3dheat/levels`
+  elsewhere), as `dota/<map>.glb` with `dota/<map>.layouts.json` beside it;
+- writes the catalogue and the model pack;
+- checks for updates and asks before installing one, unless you tick
+  *Update automatically*.
+
+The same program runs every command below: `heat3d-dota-maps heat3d-dota-maps list`,
+or shorter `heat3d-dota-maps list`. For scripts: `heat3d-dota-maps status --json`
+reports the maps' state, `heat3d-dota-maps extract --new` exports only the new
+and `heat3d-dota-maps --check --json` what is found and missing.
+The 3DHeat app's Extractors panel installs, updates and starts it for you.
+
 ## Quick start
 
 You need Windows, Python 3.10 or later ("Add python.exe to PATH" ticked in its

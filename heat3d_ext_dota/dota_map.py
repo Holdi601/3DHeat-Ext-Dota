@@ -33,6 +33,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -122,7 +123,9 @@ def find_source2viewer(given: str | None = None) -> Path:
     Source2Viewer's CLI: `given`, the HEAT3D_SOURCE2VIEWER environment variable,
     PATH, then a copy unzipped into the current folder or this tool's own folder.
     """
-    here = [folder / name for folder in (Path.cwd(), Path(__file__).resolve().parents[1])
+    # The standalone program's own folder too: a copy unzipped next to it.
+    mine = [Path(sys.executable).resolve().parent] if getattr(sys, "frozen", False) else []
+    here = [folder / name for folder in (Path.cwd(), Path(__file__).resolve().parents[1], *mine)
             for name in ("Source2Viewer-CLI.exe", "Source2Viewer-CLI")]
     for candidate in (given, os.environ.get("HEAT3D_SOURCE2VIEWER"), shutil.which("Source2Viewer-CLI"), shutil.which("Source2Viewer-CLI.exe"), *here):
         if candidate and Path(candidate).is_file():

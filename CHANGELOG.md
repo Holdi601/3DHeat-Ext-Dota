@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.3.0
+
+- A standalone program for Windows, Linux and macOS (no Python needed), built by CI with a `SHA256SUMS` file.
+  Without arguments it opens a window: what is found and what is missing (install, Source2Viewer-CLI, disk space),
+  the levels folder, the install's maps as new / changed by a game update / exported by an older version / up to
+  date, export of the picked ones one at a time (`dota/<map>.glb` and its layouts), the catalogue, the model pack,
+  and updates.
+- Each exported map is recorded in `<levels>/dota/.heat3d-extract.json` (extractor version, game build, size and
+  SHA-256 of its `.vpk`), so maps a game update adds are found and only those exported: `status --json`,
+  `extract --new` / `--changed` / `--outdated` / `<map>...`, `--progress-json`.
+- Updates ask first (update now / later / skip this version) unless automatic updates were chosen
+  (`--auto-update`, the window's checkbox, or `HEAT3D_AUTO_UPDATE=1`).
+- The install is also found in Steam libraries on Linux (native, flatpak, Steam Deck) and macOS; Source2Viewer-CLI
+  also next to the standalone program.
+
 ## 0.2.0
 
 - `layouts`: towers, barracks, ancients, fountains, outposts, shrines and the heroes', couriers', creeps' and

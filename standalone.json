@@ -1,0 +1,10 @@
+{
+  "spec": "heat3d_ext_dota.standalone_spec",
+  "collect_submodules": ["numpy"],
+  "hidden_imports": ["fast_simplification"],
+  "platforms": {
+    "windows-x64": {"build": true, "tested": true, "note": "maps, catalogue and models; CI builds and smoke-runs, maps checked on a real install; needs Source2Viewer-CLI"},
+    "linux-x64": {"build": true, "tested": false, "note": "native and flatpak Steam installs (Steam Deck too) found; CI builds and smoke-runs; needs Source2Viewer-CLI for Linux"},
+    "macos-arm64": {"build": true, "tested": false, "note": "Steam installs found; CI builds and smoke-runs; needs Source2Viewer-CLI for macOS"}
+  }
+}

@@ -21,6 +21,17 @@ and issue tracker, so it can be installed, updated, maintained - or withdrawn on
 a rights holder's request - on its own, without affecting the viewer or the
 other tools. The levels this tool writes stay on your machine.
 
+## The standalone program
+
+No Python needed: download the file for your system (Windows, Linux incl. Steam Deck, macOS) from the
+[latest release](https://github.com/Holdi601/3DHeat-Ext-Dota/releases/latest), check it against `SHA256SUMS`,
+unpack it and start `heat3d-dota-maps`. Its window finds your Dota 2 install, says what is missing (the game,
+Source2Viewer-CLI - unzip it next to the program - and disk space), lists the maps that are new or changed since
+the last export and exports the ones you pick into the 3DHeat levels folder (`dota/<map>.glb` with its layouts),
+writes the catalogue and the model pack, and asks before it updates itself. `heat3d-dota-maps --help` lists its
+commands (every command below runs through it too). The 3DHeat app's Extractors panel can install and update it
+for you. See the [documentation](https://holdi601.github.io/3DHeat-Ext-Dota/#the-standalone-program-no-python-needed).
+
 ## Quick start for new users
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
